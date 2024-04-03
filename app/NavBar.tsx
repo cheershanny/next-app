@@ -20,7 +20,8 @@ const NavBar = () => {
       <Link href="/upload" className="mx-5">
         Upload
       </Link>
-      {status === "loading" && <div>Loading...</div>}
+      <Link href="/register" className="mx-5">Register</Link>
+      {status === "loading" && <Loading />}
       {status === "unauthenticated" && (
         <Link href="/api/auth/signin" className="mx-5">
           Login
@@ -34,6 +35,7 @@ const NavBar = () => {
           </Link>
         </div>
       )}
+      
     </div>
   );
 };
